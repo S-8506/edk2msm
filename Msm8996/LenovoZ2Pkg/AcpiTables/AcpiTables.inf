@@ -36,7 +36,7 @@
   EmbeddedPkg/EmbeddedPkg.dec
   MdePkg/MdePkg.dec
   MdeModulePkg/MdeModulePkg.dec
- LenovoZ2Pkg/ZukZ2plusPkg.dec
+ LenovoZ2Pkg/LenovoZ2Pkg.dec
 
 [FixedPcd]
   gArmPlatformTokenSpaceGuid.PcdCoreCount
