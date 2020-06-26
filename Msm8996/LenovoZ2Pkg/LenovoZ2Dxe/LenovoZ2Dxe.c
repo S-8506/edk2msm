@@ -50,7 +50,7 @@ InitPeripherals (
   Status = gCpu->SetMemoryAttributes (gCpu, 0xa1a10000, 0x200000,
                   EFI_MEMORY_UC | EFI_MEMORY_XP);
   ASSERT_EFI_ERROR (Status);
-  Status = gCpu->SetMemoryAttributes (gCpu, 0x9d400000, 0x2400000,
+  Status = gCpu->SetMemoryAttributes (gCpu, 0x80400000, 0x00800000,
                   EFI_MEMORY_WC | EFI_MEMORY_XP);
   ASSERT_EFI_ERROR (Status);
 
