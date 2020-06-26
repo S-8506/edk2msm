@@ -1,0 +1,30 @@
+[Defines]
+  INF_VERSION    = 0x00010005
+  BASE_NAME      = FrameBufferSerialPortLib
+  MODULE_TYPE    = BASE
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS  = SerialPortLib
+
+[Sources.common]
+  FrameBufferSerialPortLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  LenovoZ2Pkg/LenovoZ2Pkg.dec
+
+[LibraryClasses]
+  ArmLib
+  PcdLib
+  IoLib
+  HobLib
+  CompilerIntrinsicsLib
+  CacheMaintenanceLib
+
+[Pcd]
+  gLenovoZ2PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
+  gLenovoZ2PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
+  gLenovoZ2PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gLenovoZ2PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
+  gLenovoZ2PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
+  gLenovoZ2PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight

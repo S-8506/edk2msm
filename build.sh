@@ -15,7 +15,7 @@ cd "$curdir"
 sudo chmod a+x * -R
 #mkdir $PWD/workspace
 export GCC5_AARCH64_PREFIX=aarch64-linux-gnu-
-export PACKAGES_PATH=$PWD/edk2:$PWD/edk2-platforms:$PWD/Sdm835
+export PACKAGES_PATH=$PWD/edk2:$PWD/edk2-platforms:$PWD/Msm8996
 export WORKSPACE=$PWD/workspace
 . ./edk2/edksetup.sh > /dev/null
 make -C ./edk2/BaseTools > /dev/null
@@ -23,12 +23,12 @@ clear
 echo "[Evsio0n]		Now make FD Images..."
 sleep 1
 ./tools/makefd.sh > /dev/null 
-#GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -s -n 0 -a AARCH64 -t GCC5 -p SamsungS8Pkg/SamsungS8Pkg.dsc
+#GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -s -n 0 -a AARCH64 -t GCC5 -p LenovoZ2Pkg/LenovoZ2Pkg.dsc
 echo "[Evsio0n]		Done!.............."
 sleep 2
 echo "[Evsio0n]		Now make zImages..."
 ./tools/makebootimg.sh > /dev/null
-#gzip -9nkc < workspace/Build/SamsungS8Pkg/DEBUG_GCC5/FV/SamsungS8PKG_UEFI.fd >uefi.img
+#gzip -9nkc < workspace/Build/LenovoZ2Pkg/DEBUG_GCC5/FV/LENOVO2PKG_UEFI.fd >uefi.img
 #cat uefi.img devicetree.dtb >> ./tools/split_img/boot.img-zImage
 #bash ./tools/repackimg.sh
 echo "[Evsio0n]		Build done..........."
